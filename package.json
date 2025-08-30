@@ -1,14 +1,23 @@
 {
+  "name": "imei-report",
+  "version": "1.1.0",
+  "description": "Bilingual IMEI lost/stolen report site (AR/EN) with admin UI",
+  "type": "module",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
   "dependencies": {
-    "@fastly/js-compute": "^3.30.1"
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.17.3",
+    "sqlite": "^5.1.6",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "@fastly/cli": "^10.14.0"
-  },
-  "scripts": {
-    "build": "js-compute-runtime src/index.js bin/main.wasm",
-    "start": "fastly compute serve --watch",
-    "deploy": "fastly compute publish --accept-defaults --auto-yes",
-    "domain": "fastly domain list --version=latest"
+    "nodemon": "^3.1.0"
   }
 }
